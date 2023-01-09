@@ -1,0 +1,21 @@
+html,
+body {
+    background-color: #861657;
+    background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.btn-primary {
+    background-color: #861657 !important;
+    background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%) !important;
+}
+
+.btn-primary:hover {
+    background-color: #86165700 !important;
+    background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%) !important;
+}

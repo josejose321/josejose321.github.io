@@ -1,36 +1,33 @@
-$(document).ready(function() {
+AOS.init();
 
-    let interval;
-    let isConfetti = true;
+function start() {
+    return {
+        isConfetti: true,
+        interval: null,
+        button: $("#btnClick"),
 
-    showConfetti()
+        init() {
+            this.showConfetti()
+        },
+        confetti() {
+            if (this.isConfetti) {
+                clearInterval(this.interval);
+                this.isConfetti = false;
+                this.button.text("Start")
+            } else {
+                this.showConfetti()
+                this.isConfetti = true;
+                this.button.text("Stop")
+            }
+        },
+        showConfetti() {
+            const jsConfetti = new JSConfetti();
 
-    console.log('ready');
-
-
-
-
-    $("#btnClick").on('click', function() {
-        if (isConfetti) {
-            clearInterval(interval);
-            isConfetti = false;
-            $(this).text("Start")
-        } else {
-            showConfetti()
-            isConfetti = true;
-            $(this).text("Stop")
+            this.interval = setInterval(function() {
+                jsConfetti.addConfetti({
+                    emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸']
+                })
+            }, 4000)
         }
-
-    })
-
-
-    function showConfetti() {
-        const jsConfetti = new JSConfetti();
-
-        interval = setInterval(function() {
-            jsConfetti.addConfetti({
-                emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸']
-            })
-        }, 5000)
     }
-});
+}

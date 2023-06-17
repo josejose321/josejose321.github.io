@@ -10,10 +10,10 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js" defer></script>
 
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/alphinejs@3.9.5.min.js" defer></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body>
+<body x-data="start()">
 
 
     <div class="container mt-5">
@@ -57,24 +57,17 @@
 
 
             </div>
-            <!-- <div class="position-relative mt-4">
+            <div class="position-relative mt-4">
                 <div class="position-absolute top-50 start-50 translate-middle">
-                    <button class="btn btn-primary btn-lg " id="btnClick">Stop</button>
+                    <button class="btn btn-primary btn-lg " id="btnClick" @click="confetti">Stop</button>
                 </div>
-            </div> -->
+            </div>
 
         </div>
 
 
     </div>
-
-
-    <script>
-        AOS.init();
-    </script>
     <script src="index.js"></script>
-
-
 </body>
 
 </html>

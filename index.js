@@ -74,7 +74,7 @@ function start() {
                 jsConfetti.addConfetti({
                     emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸']
                 })
-            }, 4000)
+            }, 1000)
         },
 
         showSweetAlert() {

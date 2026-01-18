@@ -40,16 +40,25 @@ function start() {
             // Show sweet alert
             Swal.fire({
                 title: 'Yay! 🎉',
-                html: '<p style="font-size: 1.2rem;">See you on February 14! 💖</p><p style="font-size: 1rem; margin-top: 10px;">Get ready for an amazing day! 🌹</p>',
+                html: '<p style="font-size: 1.2rem;">See you on February 14, BEBE! 💖</p><p style="font-size: 1rem; margin-top: 10px;">Get ready for an amazing day! 🌹🫰🫰🫰</p>',
                 icon: 'success',
-                confirmButtonText: 'Can\'t wait! 😊',
+                confirmButtonText: 'Message me sa FB! 😊',
                 confirmButtonColor: '#f5576c',
+                showCancelButton: true,
+                cancelButtonText: 'Sa NGL na lang muna😅',
+                cancelButtonColor: '#6bcf7f',
                 background: '#fff',
                 backdrop: `
                     rgba(102, 126, 234, 0.4)
                     left top
                     no-repeat
                 `
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "https://www.ngl.link/jose26459"; // Redirect to chat
+                } else {
+                    window.location.href = "https://www.ngl.link/jose26459"; // Redirect to chat
+                }
             });
 
             // Re-initialize AOS for celebration animations
@@ -95,22 +104,22 @@ function start() {
 
             // Change button label to make it harder to say no
             const noMessages = [
-                "Sure ka na po? 🥺",
-                "Di mo me lab? 💭",
-                "Please? Naiiyak na me 🙏",
+                "SURE KA NA PO? 🥺",
+                "DI MO ME LAB? 💭",
+                "PLEASE? NAIIYAK NA ME 🙏",
                 "Ma sanaol na lang ako kani sa feb 14! 💔",
-                "Give me a chance! ✨",
-                "Aray ko! 😢",
-                "Last chance! ⏰",
+                "BAKA MAGBAGO PA ISIP MO? ✨",
+                "ARAY KO PAKAK! 😢",
+                "PLEASE PO! ⏰",
                 "REALLY BA? 😭",
                 "NAKAKAIYAK! 💔💔",
-                "Mag yes ka na lang! 😤"
+                "MAG YES KA NA LANG! 😤"
             ];
 
             if (this.noCount <= noMessages.length) {
                 this.noLabel = noMessages[this.noCount - 1];
             } else {
-                this.noLabel = "Just say YES! 💖";
+                this.noLabel = "MAG YES NA NGANI! 💖";
             }
 
             // Make YES button bigger and NO button smaller

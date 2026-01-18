@@ -55,7 +55,7 @@ function start() {
                 `
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = "https://www.ngl.link/jose26459"; // Redirect to chat
+                    window.location.href = "https://www.facebook.com/jose.evascoii.7"; // Redirect to chat
                 } else {
                     window.location.href = "https://www.ngl.link/jose26459"; // Redirect to chat
                 }
